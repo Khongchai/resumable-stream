@@ -32,7 +32,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ stre
   );
   if (!stream) {
     return new Response("Stream is already done", {
-      status: 422,
+      status: 204,
     });
   }
   return new Response(stream, {
@@ -76,7 +76,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ stre
   );
   if (!stream) {
     return new Response("Stream is already done", {
-      status: 422,
+      status: 204,
     });
   }
   return new Response(stream, {
